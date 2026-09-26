@@ -1,4 +1,4 @@
-1 - Criando o Projeto Angular e Fazendo o Setup Inicial
+## 1 - Criando o Projeto Angular e Fazendo o Setup Inicial
 
 | Tecnologia | Categoria | Papel no Projeto | Benefício Principal |
 | :--- | :--- | :--- | :--- |
@@ -80,3 +80,17 @@ esse erro foi criado um grupo chamado docker e incluido meu usuario no grupo com
 - 1.19 - Subir o projeto angular - "docker compose up --build"
 
 --FEITO COMMIT--
+
+---
+
+## 2 - Criando o Serviço HTTP do Cliente
+
+- 2.1 - Criar pasta environments e arquivos, se der erro de permissão, executar o comando "sudo chown -R $USER:$USER ." dentro do terminal
+- 2.2 - codigos api-client/client.models.ts
+- 2.3 - codigos api-client/iclients.service.ts
+- 2.4 - codigos api-client/clients.service.ts
+- 2.5 - codigos app.config.ts
+- 2.6 - codigos service.token.ts
+- 2.7 - codigos clients/new-client.component.ts
+- 2.8 - list-clients.component
+- 2.9 - edit-clients
