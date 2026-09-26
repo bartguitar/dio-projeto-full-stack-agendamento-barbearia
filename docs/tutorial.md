@@ -111,3 +111,18 @@ esse erro foi criado um grupo chamado docker e incluido meu usuario no grupo com
 --FEITO COMMIT--
 
 ---
+
+## 4 - Conclusão da página de cadastro de clientes
+
+- 4.1 - isnackbar-manager
+- 4.2 - snackbar-manager
+- 4.3 - services_token
+- 4.4 - new client.component
+- 4.5 - app routes
+- 4.6 - excluir tudo em app.component.html para não carregar a página principal do angular, deixar só a primeira linha "<router-outlet />"
+- 4.6 - fazer o teste rodar "docker compose up --build"
+- 4.7 - testar formulário "localhost:4200/clients/new-client"
+
+--FEITO COMMIT--
+
+---
