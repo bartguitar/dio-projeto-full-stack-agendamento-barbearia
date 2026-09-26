@@ -94,3 +94,20 @@ esse erro foi criado um grupo chamado docker e incluido meu usuario no grupo com
 - 2.7 - codigos clients/new-client.component.ts
 - 2.8 - list-clients.component
 - 2.9 - edit-clients
+
+--FEITO COMMIT--
+
+---
+
+## 3 - Criando a página de cadastro de clientes
+
+- 3.1 - clients/client.models
+- 3.2 - new-client.component.html
+- 3.3 - client-form.component.ts
+- 3.4 - client-form.component.scss
+- 3.5 - client-form.component.html
+- 3.6 - adicionar código new-client.component.html
+
+--FEITO COMMIT--
+
+---
