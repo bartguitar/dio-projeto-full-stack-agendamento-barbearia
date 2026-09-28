@@ -1,11 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ClientModelForm } from '../../client.models';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgxMaskDirective } from 'ngx-mask';
+import { ClientModelForm } from '../../client.models';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-
 
 @Component({
   selector: 'app-client-form',
@@ -21,12 +20,11 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ClientFormComponent {
 
-  @Input() client: ClientModelForm = { id: 0, name: '', email: '', phone: ''}
+  @Input() client: ClientModelForm = { id: 0, name: '', email: '', phone: '' }
 
   @Output() clientSubmited = new EventEmitter<ClientModelForm>();
-onSubmit: any;
 
-  obSubmit(_: NgForm) {
+  onSubmit(_: NgForm) {
     this.clientSubmited.emit(this.client)
   }
 

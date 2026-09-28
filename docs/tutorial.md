@@ -126,3 +126,16 @@ esse erro foi criado um grupo chamado docker e incluido meu usuario no grupo com
 --FEITO COMMIT--
 
 ---
+
+## 5 - Criação do Header e Menu de Navegação
+
+- 5.1 - card-header.component.html
+- 5.2 - (../src/app/commons/components/card-header/card-header.component.scss)
+- 5.3 - app.component.html
+- 5.4 - app. component.ts
+- 5.5 - new-client.component.ts
+- 5.6 - Testar aplicação - http://localhost:4200/clients/new-client
+- 5.7 - códigos menu-bar
+- 5.8 - testar aplicação
+
+--FEITO COMMIT--
