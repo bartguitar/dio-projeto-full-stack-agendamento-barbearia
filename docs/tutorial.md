@@ -139,3 +139,10 @@ esse erro foi criado um grupo chamado docker e incluido meu usuario no grupo com
 - 5.8 - testar aplicação
 
 --FEITO COMMIT--
+
+## 6 - Tela de Atualização de clientes
+
+- 6.1 - edit-client
+- 6.2 - testar - http://localhost:4200/clients/edit-client/1
+
+--FEITO COMMIT--
