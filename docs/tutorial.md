@@ -146,3 +146,14 @@ esse erro foi criado um grupo chamado docker e incluido meu usuario no grupo com
 - 6.2 - testar - http://localhost:4200/clients/edit-client/1
 
 --FEITO COMMIT--
+
+## 7 - Tela de listagem de clientes
+
+- 7.1 - yes-no-dialog
+- 7.2 - subir container e testar
+- 7.3 - client-table
+- 7.4 - idialog-manager.service.ts
+- 7.5 - dialog-manager.service.ts
+- 7.6 - service.token.ts
+
+--FEITO COMMIT--
