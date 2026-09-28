@@ -157,3 +157,15 @@ esse erro foi criado um grupo chamado docker e incluido meu usuario no grupo com
 - 7.6 - service.token.ts
 
 --FEITO COMMIT--
+
+## 8 - Conclusão da Listagem de clientes e criando service de schedule
+
+- 8.1 - client-table components
+- 8.2 - list-clients
+- 8.3 - criar custom-paginator.ts
+- 8.4 - services/api-client/schedules.service
+- 8.5 - criar ischedules.service.ts
+- 8.6 - schedules.service.ts
+- 8.7 - descomentar //SCHEDULE: new InjectionToken<IScheduleService>('SERVICES_TOKEN.HTTP.SCHEDULE'),
+
+--FEITO COMMIT--
