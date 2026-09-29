@@ -176,3 +176,20 @@ esse erro foi criado um grupo chamado docker e incluido meu usuario no grupo com
 - 9.2 - schedule-month component.html
 
 --FEITO COMMIT--
+
+## - 10 - Lógica do componente de agendamento
+
+- 10.1 - colocar a linha external no arquivo docker-compose.yml
+- 10.2 - schedule-calendar components
+- 10.3 - schedules models
+
+--FEITO COMMIT--
+
+## - 11 - Conclusão
+
+- 11.1 - schedule-month component
+- 11.2 - subir mock server
+- 11.3 - subir container - ```docker compose up --build```
+- 11.4 - testar aplicação - http://localhost:4200
+
+--FEITO COMMIT--
