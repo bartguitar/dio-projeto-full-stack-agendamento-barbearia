@@ -18,14 +18,14 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrl: './client-table.component.scss',
   providers: [
     { provide: SERVICES_TOKEN.DIALOG, useClass: DialogManagerService },
-    { provide: MatPaginatorIntl, useClass: DialogManagerService }
+    { provide: MatPaginatorIntl, useValue: new MatPaginatorIntl() }
   ]
 })
 export class ClientTableComponent implements AfterViewInit, OnChanges, OnDestroy {
 
   @Input() clients: ClientModelTable[] = []
 
-  dataSource!: MatTableDataSource<ClientModelTable>
+  dataSource = new MatTableDataSource<ClientModelTable>([])
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -42,7 +42,12 @@ export class ClientTableComponent implements AfterViewInit, OnChanges, OnDestroy
   ) { }
 
   ngAfterViewInit(): void {
-    this.dataSource.paginator = this.paginator
+    if (!this.dataSource) {
+      this.dataSource = new MatTableDataSource<ClientModelTable>(this.clients)
+    }
+    if (this.paginator) {
+      this.dataSource.paginator = this.paginator
+    }
   }
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['clients'] && this.clients) {
@@ -76,6 +81,7 @@ export class ClientTableComponent implements AfterViewInit, OnChanges, OnDestroy
           this.onConfirmDelete.emit(client)
           const updatedList = this.dataSource.data.filter(c => c.id !== client.id)
           this.dataSource = new MatTableDataSource<ClientModelTable>(updatedList)
+          this.dataSource.paginator = this.paginator
         }
       })
   }

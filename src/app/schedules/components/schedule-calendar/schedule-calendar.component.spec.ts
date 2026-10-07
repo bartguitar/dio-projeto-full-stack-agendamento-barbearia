@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { ScheduleCalendarComponent } from './schedule-calendar.component';
 
@@ -8,7 +10,7 @@ describe('ScheduleCalendarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ScheduleCalendarComponent]
+      imports: [ScheduleCalendarComponent, NoopAnimationsModule, MatDialogModule]
     })
     .compileComponents();
 

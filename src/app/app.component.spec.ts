@@ -1,10 +1,18 @@
 import { TestBed } from '@angular/core/testing';
+import { ActivatedRoute, provideRouter } from '@angular/router';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
+      providers: [
+        provideRouter([]),
+        {
+          provide: ActivatedRoute,
+          useValue: { firstChild: null, snapshot: { data: {} } }
+        }
+      ]
     }).compileComponents();
   });
 
@@ -24,6 +32,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, barber-shop-frontend');
+    expect(compiled.querySelector('app-card-header')?.textContent).toContain('barber-shop-frontend');
   });
 });

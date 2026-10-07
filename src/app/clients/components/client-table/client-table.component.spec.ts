@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { ClientTableComponent } from './client-table.component';
 
@@ -8,7 +10,7 @@ describe('ClientTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ClientTableComponent]
+      imports: [ClientTableComponent, NoopAnimationsModule, MatDialogModule]
     })
     .compileComponents();
 

@@ -32,10 +32,17 @@ export class ListClientsComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.httpSubscriptions.push(this.httpService.list().subscribe(data => this.clients = data))
+    this.loadClients()
   }
+
   ngOnDestroy(): void {
     this.httpSubscriptions.forEach(s => s.unsubscribe())
+  }
+
+  private loadClients(): void {
+    this.httpSubscriptions.push(
+      this.httpService.list().subscribe(data => this.clients = data)
+    )
   }
 
   update(client: ClientModelTable) {
@@ -44,7 +51,10 @@ export class ListClientsComponent implements OnInit, OnDestroy {
 
   delete(client: ClientModelTable) {
     this.httpSubscriptions.push(
-      this.httpService.delete(client.id).subscribe(_ => this.snackBarManager.show(`O cliente ${client.name} foi excluido com sucesso`))
+      this.httpService.delete(client.id).subscribe(_ => {
+        this.snackBarManager.show(`O cliente ${client.name} foi excluido com sucesso`)
+        this.loadClients()
+      })
     )
   }
 

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNgxMask } from 'ngx-mask';
 
 import { ClientFormComponent } from './client-form.component';
 
@@ -8,7 +9,8 @@ describe('ClientFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ClientFormComponent]
+      imports: [ClientFormComponent],
+      providers: [provideNgxMask()]
     })
     .compileComponents();
 
